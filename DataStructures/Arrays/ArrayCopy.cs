@@ -5,18 +5,20 @@ namespace Data_Structures_and_Algorithms.DataStructures.Arrays
     class ArrayCopy
     {
         private int[] _array;
+        private int _count;
 
         public ArrayCopy(int size)
         {
             _array = new int[size];
+            _count = 0;
         }
 
         public void Insert(int item)
         {
-            for(var i = 0; i < _array.Length; i++)
+            if(_count < _array.Length) 
             {
-                if (_array[i] != 0) continue;
-                _array[i] = item;
+                _array[_count] = item;
+                _count++;
                 return;
             }
 
@@ -26,6 +28,7 @@ namespace Data_Structures_and_Algorithms.DataStructures.Arrays
         
             buffer[^1] = item;
             _array = buffer;
+            _count++;
         }
 
         public void RemoveAt(int index)
@@ -49,22 +52,20 @@ namespace Data_Structures_and_Algorithms.DataStructures.Arrays
             }
 
             _array = buffer;
+            _count--;
         }
 
         public int IndexOf(int item)
         {
             for(var i = 0; i < _array.Length; i++)
-            {
                 if(_array[i] == item) return i;
-                i++;
-            }
 
             return -1;
         }
 
         public void Print()
         {
-            foreach(var num in _array) Console.WriteLine(num);
+            for(var i = 0; i < _count; i++) Console.WriteLine(_array[i]);
         }
     }
 }

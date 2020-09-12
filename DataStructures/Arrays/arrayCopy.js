@@ -28,6 +28,7 @@ const arrayCopy = (function () {
                 }
 
                 array = buffer;
+                count--;
             },
             indexOf(item) {
                 for (var i = 0; i < array.length; i++) {

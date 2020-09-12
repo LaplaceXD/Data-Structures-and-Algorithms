@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Data_Structures_and_Algorithms
+﻿namespace Data_Structures_and_Algorithms
 {
     class Program
     {
