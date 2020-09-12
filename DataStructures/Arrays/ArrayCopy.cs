@@ -36,14 +36,14 @@ namespace Data_Structures_and_Algorithms.DataStructures.Arrays
             var buffer = new int[_array.Length - 1];
             var a = 0;
             var b = 0;
-            while(a < buffer.Length)
+            while(a < _array.Length)
             {
-                if(b == index) {
+                if(a == index) {
                     a++;
                     continue;
                 }
 
-                buffer[a] = _array[b];
+                buffer[b] = _array[a];
                 a++;
                 b++;
             }
