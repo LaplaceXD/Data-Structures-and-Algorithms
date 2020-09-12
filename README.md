@@ -11,7 +11,7 @@ you'll be seeing the algorithms here written in three languages.
 
 ## Data Structures
 
-    1. [Arrays](https://github.com/LaplaceXD/Data-Structures-and-Algorithms)
+1. [Arrays](https://github.com/LaplaceXD/Data-Structures-and-Algorithms)
 
 # Credits
 
