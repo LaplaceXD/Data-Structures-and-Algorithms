@@ -22,8 +22,8 @@ namespace Data_Structures_and_Algorithms.DataStructures.Arrays
                 return;
             }
 
-            var buffer = new int[_array.Length + 1];
-            for(var a = 0; a < _array.Length; a++)
+            int[] buffer = new int[_array.Length + 1];
+            for(int a = 0; a < _array.Length; a++)
                 buffer[a] = _array[a];
         
             buffer[^1] = item;
@@ -36,9 +36,9 @@ namespace Data_Structures_and_Algorithms.DataStructures.Arrays
             if(index >= _array.Length)
                 throw new ArgumentOutOfRangeException();
 
-            var buffer = new int[_array.Length - 1];
-            var a = 0;
-            var b = 0;
+            int[] buffer = new int[_array.Length - 1];
+            int a = 0;
+            int b = 0;
             while(a < _array.Length)
             {
                 if(a == index) {
@@ -57,7 +57,7 @@ namespace Data_Structures_and_Algorithms.DataStructures.Arrays
 
         public int IndexOf(int item)
         {
-            for(var i = 0; i < _array.Length; i++)
+            for(int i = 0; i < _array.Length; i++)
                 if(_array[i] == item) return i;
 
             return -1;
@@ -65,7 +65,7 @@ namespace Data_Structures_and_Algorithms.DataStructures.Arrays
 
         public void Print()
         {
-            for(var i = 0; i < _count; i++) Console.WriteLine(_array[i]);
+            for(int i = 0; i < _count; i++) Console.WriteLine(_array[i]);
         }
     }
 }
